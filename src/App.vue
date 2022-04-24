@@ -2,29 +2,15 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated class="glossy">
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          @click="leftDrawerOpen = !leftDrawerOpen"
-          aria-label="Menu"
-          icon="menu"
-        />
+        <q-btn flat dense round @click="leftDrawerOpen = !leftDrawerOpen" aria-label="Menu" icon="menu" />
 
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
+        <q-toolbar-title> Quasar App </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      class="bg-grey-2"
-    >
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered class="bg-grey-2">
       <q-list>
         <q-item-label header>Essential Links</q-item-label>
         <q-item clickable tag="a" target="_blank" href="https://quasar.dev">
@@ -82,20 +68,20 @@
 </template>
 
 <script>
-import { ref } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import { ref } from "vue";
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  name: 'LayoutDefault',
+  name: "LayoutDefault",
 
   components: {
-    HelloWorld
+    HelloWorld,
   },
 
-  setup () {
+  setup() {
     return {
-      leftDrawerOpen: ref(false)
-    }
-  }
-}
+      leftDrawerOpen: ref(false),
+    };
+  },
+};
 </script>
